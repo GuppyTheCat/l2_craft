@@ -18,3 +18,7 @@
 .nav-item a:hover{
 	text-decoration: none;
 }
+
+.item-link:hover{
+	cursor: pointer;
+}
