@@ -1,7 +1,3 @@
-#info {
-    margin-left: 20px;
-}
-
 .show_btn {
     margin-top: -6px;
     padding: 0;
@@ -9,4 +5,16 @@
 
 .hide {
     display: none;
+}
+
+.navbar-nav{
+	padding-left: 1rem;
+}
+
+.nav-item a{
+	color: black;
+}
+
+.nav-item a:hover{
+	text-decoration: none;
 }
