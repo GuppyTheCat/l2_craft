@@ -30,7 +30,7 @@ $(document).on('click', '.item-link', function() {
             break;
         };
     };
-    content += "Предмет: " + items[i][0] + "<br><br>";
+    content += items[i][0] + "<br><br>";
     for (j = 0; j < items[i][1].length; j++) {
         var craft_res_pos = check_craftable(items[i][1][j][0]);
         if (craft_res_pos == -1) {
@@ -46,7 +46,6 @@ $(document).on('click', '.item-link', function() {
             content += "</div></div>";
         };
     };
-    content += "<hr>";
     $(".item-recipe").append(content);
 
     function check_craftable(resource) {

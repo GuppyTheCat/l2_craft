@@ -7,18 +7,42 @@
     display: none;
 }
 
-.navbar-nav{
-	padding-left: 1rem;
+.navbar {
+    background-color: #90caf9;
 }
 
-.nav-item a{
-	color: black;
+.main-panel{
+	background-color:lavenderblush;
 }
 
-.nav-item a:hover{
-	text-decoration: none;
+.container {
+    padding: 0;
+    overflow: hidden;
 }
 
-.item-link:hover{
-	cursor: pointer;
+.navbar-nav {
+    padding-left: 1rem;
+}
+
+.nav-item a {
+    color: black;
+}
+
+.nav-item a:hover {
+    text-decoration: none;
+}
+
+.item-link:hover {
+    cursor: pointer;
+}
+
+.item-recipe {
+    padding-bottom: 2rem;
+}
+
+.jumbotron {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #90caf9;
+    border-radius: 0;
 }
