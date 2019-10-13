@@ -48,30 +48,15 @@ $(document).on('click', '.item-link', function() {
         };
         $(".item-recipe").append(content);
 
-
-
-
-        /*var result = "";*/
         var arr = items[i][1].slice();
         for (j = 0; j < items[i][1].length; j++) {
             var craft_res_pos = check_craftable(items[i][1][j][0]);
             if (craft_res_pos == -1) {
                 /*result += items[i][1][j][0] + " - " + items[i][1][j][1] + " шт.\n";*/
             } else {
-                /*result += items[i][1][j][0] + " - " + items[i][1][j][1] + " шт.\n";
-                result += bubble(i, j, craft_res_pos);*/
                 arr[j].push(bubble_arr(i, j, craft_res_pos));
             }
         };
-
-        /*function bubble(i, j, craft_res_pos) {
-            var res = "";
-            for (var l = 0; l < resources[craft_res_pos][1].length; l++) {
-                res += "\t" + resources[craft_res_pos][1][l][0] + " " +
-                    (resources[craft_res_pos][1][l][1] * Math.ceil(items[i][1][j][1] / resources[craft_res_pos][2])) + " шт.\n";
-            };
-            return res;
-        }*/
 
         function bubble_arr(i, j, craft_res_pos) {
             var res = [];
@@ -91,8 +76,6 @@ $(document).on('click', '.item-link', function() {
 
 
 
-
-
         function check_craftable(resource) {
             for (var z = 0; z < craftable_resources.length; z++) {
                 if (resource == craftable_resources[z]) {
@@ -107,40 +90,3 @@ $(document).on('click', '.item-link', function() {
 $(document).on('click', '.show_btn', function() {
     $(this).parent().children(".craftable_res > div").toggleClass("hide");
 });
-
-
-
-/*$.getJSON("../l2_craft/json/recipes_items.json", function(data) {
-    var content = "";
-    var items = data.items;
-    var i, j;
-    for (i = 0; i < items.length; i++) {
-        content += "Предмет: " + items[i][0] + "<br><br>";
-        for (j = 0; j < items[i][1].length; j++) {
-            var craft_res_pos = check_craftable(items[i][1][j][0]);
-            if (craft_res_pos == -1) {
-                content += items[i][1][j][0] + " - " + items[i][1][j][1] + " шт.<br>";
-            } else {
-                content += "<div class='craftable_res'>" + items[i][1][j][0] + ' - ' + items[i][1][j][1] +
-                    " шт. <button class='btn default show_btn font-weight-bold'>+</button><br>";
-                content += "<div class='hide'>";
-                for (var l = 0; l < resources[craft_res_pos][1].length; l++) {
-                    content += "&nbsp;&nbsp;&nbsp;&nbsp;" + resources[craft_res_pos][1][l][0] + " " +
-                        (resources[craft_res_pos][1][l][1] * Math.ceil(items[i][1][j][1]/resources[craft_res_pos][2])) + " шт.<br>";
-                };
-                content += "</div></div>";
-            };
-        };
-        content += "<hr>";
-    };
-    $(".item-recipe").append(content);
-
-    function check_craftable(resource) {
-        for (var z = 0; z < craftable_resources.length; z++) {
-            if (resource == craftable_resources[z]) {
-                return z;
-            };
-        };
-        return -1;
-    };
-});*/
