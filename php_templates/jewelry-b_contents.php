@@ -158,6 +158,6 @@
             </tbody>
         </table>
     </div>
-    <div class="item-recipe hide main-panel"><a class="nav-link" href="../l2_craft/jewelry_b.html">Назад</a>
+    <div class="item-recipe hide main-panel"><a class="nav-link" href="../l2_craft/jewelry-b.php">Назад</a>
     </div>
 </div>
